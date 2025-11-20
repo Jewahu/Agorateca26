@@ -15,9 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
-
-    // Close the statement early so it's not left open before any redirects
     $stmt->close();
+    $conn->close();
 
     if ($result && $result->num_rows == 1) {
         $user = $result->fetch_assoc();
@@ -29,7 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['username'] = $user['username'];
                 $_SESSION['email'] = $user['email'];
                 
-                header("Location: dashboard.php");
+                // Redirigir al nuevo index.php
+                header("Location: index.php");
                 exit();
             } else {
                 // Cuenta no verificada
@@ -47,5 +47,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 }
-$conn->close();
 ?>
