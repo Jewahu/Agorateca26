@@ -1,0 +1,138 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    background-color: #FFFFFF;
+    padding: 40px;
+    text-align: center;
+    width: 400px;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: #601a1a;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #601a1a;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+/* Contenedor para el input y el icono del ojo */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    color: #888;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #CCCCCC;
+    color: #333; /* Cambiado para que el texto sea visible */
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+::placeholder {
+    color: #777;
+    opacity: 1;
+}
+:-ms-input-placeholder { color: #777; }
+::-ms-input-placeholder { color: #777; }
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.options label {
+    margin-left: 8px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #a92a2a;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #8c2323;
+}
+
+.footer-link {
+    margin-top: 25px;
+}
+.footer-link p { margin: 0; color: #555; }
+.footer-link a { color: #a92a2a; text-decoration: underline; }
+
+/* Mensajes */
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.success-message {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Mensaje en registration_pending.php */
+.message-box .main-message {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+}
+.message-box .sub-message {
+    font-size: 1.2em;
+    color: #555;
+}
